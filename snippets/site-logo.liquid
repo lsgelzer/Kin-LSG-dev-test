@@ -1,5 +1,5 @@
     {% if section.settings.site-logo != blank %}
-        <img src="{{section.settings.site-logo | img_url: '81x'  }}" alt="{{shop.name}}">
+        <a href ="/"><img src="{{section.settings.site-logo | img_url: '81x'  }}" alt="{{shop.name}}"></a>
     {% else %}
-        {{shop.name}}
+        <a href ="/">{{shop.name}}</a>
     {% endif %}

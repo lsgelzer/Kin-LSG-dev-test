@@ -3,11 +3,24 @@
         <h2 class="hero-title">{{section.settings.hero-title}}</h2>
         <p class="hero-desc">{{section.settings.hero-description}}</p>
         <p class="subtext">{{section.settings.subtext}}</p>
-        <a class="btn hero-btn" href="{{section.settings.cta_url}}">{{section.settings.cta_text}}</a>
+        <a class="btn hero-btn desktop" href="{{section.settings.cta_url}}">{{section.settings.cta_text_desktop}}</a>
+        <a class="btn hero-btn mobile" href="{{section.settings.cta_url}}">{{section.settings.cta_text_mobile}}</a>
     </div>
 
 </div>
-
+<style>
+    
+    .home-hero{
+        background-image: url({{section.settings.mobile-image | img_url: '768x' }});
+        background-position:top center;
+    }
+    @media(min-width:768px){
+    .home-hero{
+        background-image: url({{section.settings.desktop-image | img_url: '1920x'}});
+        background-position:right;
+    }  
+    }
+</style>
 {% schema %}
   {
     "name": "Home Page Hero",
@@ -24,7 +37,7 @@
       "label": "Choose the image for Mobile"
      },
      {
-        "type": "text",
+        "type": "html",
         "id": "hero-title",
         "label": "Hero Title Text",
         "default":"Hero Title Text"
@@ -43,8 +56,14 @@
       },
       {
         "type": "text",
-        "id": "cta_text",
-        "label": "CTA Text",
+        "id": "cta_text_desktop",
+        "label": "CTA Text Desktop",
+        "default":"CTA Text"
+      },
+      {
+        "type": "text",
+        "id": "cta_text_mobile",
+        "label": "CTA Text Mobile",
         "default":"CTA Text"
       },
       {

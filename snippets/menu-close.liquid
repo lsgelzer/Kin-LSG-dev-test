@@ -1,5 +1,5 @@
     {% if section.settings.close-menu != blank %}
-        <img src="{{ section.settings.close-menu | img_url: '48x' }}" alt="close menu">
+        <img src="{{ section.settings.close-menu | img_url: '100x' }}" alt="close menu" class="close-menu-img" onClick="toggleMenu()">
     {% else %}
         <span>close menu</span>
     {% endif %}

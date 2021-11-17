@@ -1,2 +1,253 @@
-// Put your styles in this file.
-// Note: "@import" rules aren’t supported.
+/*Fonts */
+@charset "UTF-8";
+@font-face {
+  font-family: 'Ogg-Regular';
+  src: url("Ogg-Regular.woff2") format("woff2"); }
+@font-face {
+  font-family: 'Ogg-Italic';
+  src: url("OggTextBookItalic.woff2") format("woff2"); }
+@font-face {
+  font-family: 'ry';
+  src: url("https://kin-website-fonts.s3.amazonaws.com/Ogg/ogg-new/Ogg-Roman.woff2") format("woff2"); }
+@font-face {
+  font-family: 'Univers';
+  src: url("3562B4_2_0.woff2") format("woff2");
+  /* IE9 Compat Modes */ }
+@font-face {
+  font-family: 'Univers Condensed Bold';
+  src: url("https://kin-website-fonts.s3.amazonaws.com/Univers/Univers-Condensed-Bold/UniversCondensedBold.woff2") format("woff2"); }
+@font-face {
+  font-family: 'Univers Condensed Light';
+  src: url("UniversCondensedLight.woff2") format("woff2"); }
+@font-face {
+  font-family: 'Univers Condensed Regular';
+  src: url("https://kin-website-fonts.s3.amazonaws.com/Univers/Univers-Condensed-Regular/UniversCondensedRegular.woff2") format("woff2"); }
+@font-face {
+  font-family: 'Univers Extended Bold';
+  src: url("UniversExtBold.woff2") format("woff2");
+  /* IE9 Compat Modes */ }
+@font-face {
+  font-family: 'Univers Extended Regular';
+  src: url("https://kin-website-fonts.s3.amazonaws.com/Univers/Univers-Extended-Regular/UniversExtendedRegular.woff2") format("woff2");
+  /* IE9 Compat Modes */ }
+@font-face {
+  font-family: 'Univers Extended Black';
+  src: url("https://kin-website-fonts.s3.amazonaws.com/Univers/Unvers-Ext-Black/UniversExtBlack.woff2") format("woff2");
+  /* IE9 Compat Modes */ }
+@font-face {
+  font-family: 'Univers 45 light';
+  src: url("https://kin-website-fonts.s3.amazonaws.com/Univers/Univers-45-light.woff2") format("woff2");
+  /* IE9 Compat Modes */ }
+@font-face {
+  font-family: 'Univers 65 bold';
+  src: url("https://kin-website-fonts.s3.amazonaws.com/Univers/Uniivers-65-bold.woff2") format("woff2");
+  /* IE9 Compat Modes */ }
+@font-face {
+  font-family: 'Ogg Book Italic';
+  src: url("https://kin-website-fonts.s3.amazonaws.com/OggTextBookItalic.woff2") format("woff2");
+  /* IE9 Compat Modes */ }
+@font-face {
+  font-family: 'Univers Extended Black';
+  src: url("https://kin-website-fonts.s3.amazonaws.com/Univers/Unvers-Ext-Black/UniversExtBlack.woff2") format("woff2");
+  /* IE9 Compat Modes */ }
+
+/*===== Global Styles =====*/
+body{
+    margin:0;
+}
+.desktop{
+    display: none;
+}
+.mobile{
+    display: block;
+}
+@media(min-width:768px){
+    
+    .mobile{
+        display:none;
+    }
+    .desktop{
+        display: block;
+    }
+}
+
+
+  /* ========== Header ============== */
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+    margin-top: 49px;
+}
+.cart-account-wrapper {
+    display: flex;
+    align-items: center;
+    padding-right:48px;
+}
+.account-wrapper a {
+    margin-right: 32px;
+    text-decoration: none;
+    color:#fff;
+    font-family: 'Univers';
+    font-size:13px;
+}
+.menu-icon {
+    padding-left: 27px;
+    max-width:48px;
+    cursor: pointer;
+}
+.cart-icon{
+    max-width: 22px;
+}
+@media(min-width:768px){
+    .header{
+        margin-top:15px;
+    }
+}
+
+/*=====Hero ===== */
+.home-hero {
+    min-height: 800px;
+    background-size: cover;
+    margin-top: -102px;
+    
+}
+.hero-content {
+    width: 100%;
+    text-align: center;
+    padding-top: 82%;
+    padding-bottom: 60px;
+}
+.hero-title{
+    font-size:97px;
+    line-height:113px;
+    font-family: 'Ogg-Regular';
+    color:#fff; 
+    margin-bottom:20px;
+}
+.hero-title span{
+    font-family: 'Ogg-Italic';
+}
+.hero-desc{
+    font-family: Univers;
+    font-size:16px;
+    line-height:25px;
+    color:#fff;
+    max-width:273px;
+    margin:auto;
+}
+.subtext{
+    font-family: 'Univers Condensed Light';
+    font-size: 11px;
+    line-height: 20px;
+    letter-spacing: 0.458333px;
+    color:#fff;
+    text-transform: uppercase;
+    padding-bottom: 12px;
+}
+.btn.hero-btn{
+    text-align: center;
+    text-decoration: none;
+    color: #232323;
+    background: #fff;
+    padding: 12px 0px;
+    border-radius: 3px;
+    font-family: 'Univers Extended Bold';
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 1.16667px;
+    text-transform: uppercase;
+    margin-top: 12px;
+    max-width:376px;
+    width:100%;
+    margin:auto;
+    
+}
+@media(min-width:768px){
+    .hero-content{
+        text-align:left;
+        max-width: 480px;
+        padding-left: 96px;
+        padding-top: 100px;
+    }
+    .hero-desc{
+        margin: revert;
+    }
+    .btn.hero-btn{
+        max-width:290px;
+        margin:0;
+    }
+    .home-hero {
+        margin-top: -68px;
+        
+    }
+
+}
+
+/*===== Menu =====*/
+.menu-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -150%;
+    width: 100%;
+   
+    background: #F9F8F5;   ;
+    transition: left ease-in-out .5s;
+}
+
+.close-menu-img {
+    max-width: 48px;
+    cursor: pointer;
+    padding: 49px 27px;
+}
+.menu{
+    margin-top:106px;
+    margin-bottom:50px;
+}
+.menu-logo {
+    position: absolute;
+    left: calc(50% - 28px);
+    right: calc(50%-28px);
+    top: 56px;
+    max-width:56px;
+}
+.menu a {
+    display: block;
+    font-family: 'Ogg-Regular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 90px;
+    text-decoration: none;
+    color: #2b2b2b;
+    text-align: center;
+}
+
+.submenu a{
+    display: block;
+    text-align:center;
+    font-family: 'Univers Extended Bold';
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color:#232323
+}
+
+.menu-wrapper.open {
+    transform: translateX(0px);
+    left:0;
+    
+}
+@media(min-width:768px){
+    .menu-wrapper{
+        width:50%;
+        background:#fff;
+    }
+    .close-menu-img{
+        padding:16px 27px;
+    }
+}

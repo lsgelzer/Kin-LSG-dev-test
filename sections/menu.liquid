@@ -2,8 +2,35 @@
   <a class="close-menu">
     {% render 'menu-close' %}
   </a>
+    {% render 'menu-logo' %}
   <div class="menu">
     {% for link in linklists[section.settings.main-menu].links %}
+      {% assign child_list_handle = link.title | handleize %}
+    {% if linklists[child_list_handle].links != blank %}
+      <a href="{{ link.url }}">{{ link.title }}</a>
+      [{% for childlink in linklists[child_list_handle].links %}
+        <a href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
+      {% endfor %}]
+    {% else %}
+      <a href="{{ link.url }}">{{ link.title }}</a>
+    {% endif %}
+    {% endfor %}
+  </div>
+  <div class="submenu desktop">
+    {% for link in linklists[section.settings.sub-desktop].links %}
+      {% assign child_list_handle = link.title | handleize %}
+    {% if linklists[child_list_handle].links != blank %}
+      <a href="{{ link.url }}">{{ link.title }}</a>
+      [{% for childlink in linklists[child_list_handle].links %}
+        <a href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
+      {% endfor %}]
+    {% else %}
+      <a href="{{ link.url }}">{{ link.title }}</a>
+    {% endif %}
+    {% endfor %}
+  </div>
+  <div class="submenu mobile">
+    {% for link in linklists[section.settings.sub-mobile].links %}
       {% assign child_list_handle = link.title | handleize %}
     {% if linklists[child_list_handle].links != blank %}
       <a href="{{ link.url }}">{{ link.title }}</a>
@@ -29,6 +56,23 @@
     "label": "Main Menu",
     "default": "main-menu"
   },
+  {
+    "type": "link_list",
+    "id": "sub-desktop",
+    "label": "Sub Menu Desktop",
+    "default": "main-menu"
+  },
+  {
+    "type": "link_list",
+    "id": "sub-mobile",
+    "label": "Sub Menu Mobile",
+    "default": "main-menu"
+  },
+  {
+    "type": "image_picker",
+    "id": "menu-logo",
+    "label": "Menu Logo"
+   },
   {
     "type": "image_picker",
     "id": "close-menu",

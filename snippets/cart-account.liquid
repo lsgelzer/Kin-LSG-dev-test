@@ -1,6 +1,6 @@
-
-
-  {% if shop.customer_accounts_enabled %}
+<div class="cart-account-wrapper">
+    <div class="account-wrapper desktop">
+    {% if shop.customer_accounts_enabled %}
     {% if customer %}
       <a href="/account">My Account</a>
       
@@ -9,11 +9,14 @@
       
     {% endif %}
   {% endif %}
-  
+</div>
   <a href="/cart">
     {% if section.settings.cart-icon != blank %}
-        <img src="{{section.settings.cart-icon | img_url: '22x'}}" alt="cart icon">
+        <img src="{{section.settings.cart-icon | img_url: '100x'}}" alt="cart icon" class="cart-icon">
     {% else %}
         cart
     {% endif %}
     </a>
+</div>
+
+  
