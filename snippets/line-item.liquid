@@ -1,0 +1,19 @@
+{% for item in cart.items %}
+    <div class="line-item line-item-{{ forloop.index }}">    
+        <a href="{{ item.url  }}">
+            <img src="{{item | img_url: "38x"}} alt="{{item.product.title}}">
+        </a>
+        <div class="line-item-info">
+            <h4 class="line-item-title">{{{item.product.title}}</h4>
+            <p class="variant-name-price">{{item.variant.title}}, {{item.variant.price}}</p>
+            <div class="quanity-wrapper">
+                <button> - </button>                
+                <span class="quantity">{{item.quantity}}</span>
+                <label class="qty-label" for="updates_{{ line_item.key }}">quantity</label>
+                <input class="js-qty-field js-line-qty" type="number" name="updates[]" id="updates_{{ line_item.key }}" value="{{ line_item.quantity }}" min="0">
+                <button> + </button>
+            </div>
+        </div>
+        <a class="remove-line js-remove-line" href="/cart/change?line={{ forloop.index }}&amp;quantity=0">{% render 'icon-close' %}</a>
+    </div>
+{% endfor %}

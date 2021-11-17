@@ -1,0 +1,6 @@
+{% if section.settings.menu-icon != blank %}    
+    <img src="{{section.settings.menu-icon | img_url: '48x' }}" alt="menu icon">
+{% else %}
+    <a href="#">Main Menu</a>
+{% endif %}
+

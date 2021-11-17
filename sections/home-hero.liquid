@@ -1,0 +1,66 @@
+<div  class="home-hero">
+    <div class="hero-content">
+        <h2 class="hero-title">{{section.settings.hero-title}}</h2>
+        <p class="hero-desc">{{section.settings.hero-description}}</p>
+        <p class="subtext">{{section.settings.subtext}}</p>
+        <a class="btn hero-btn" href="{{section.settings.cta_url}}">{{section.settings.cta_text}}</a>
+    </div>
+
+</div>
+
+{% schema %}
+  {
+    "name": "Home Page Hero",
+    "settings": [
+  
+     {
+      "type": "image_picker",
+      "id": "desktop-image",
+      "label": "Choose the image for Desktop"
+     },
+	 {
+      "type": "image_picker",
+      "id": "mobile-image",
+      "label": "Choose the image for Mobile"
+     },
+     {
+        "type": "text",
+        "id": "hero-title",
+        "label": "Hero Title Text",
+        "default":"Hero Title Text"
+      },
+      {
+        "type": "text",
+        "id": "hero-description",
+        "label": "Hero Description",
+        "default":"Hero Description"
+      },
+      {
+        "type": "text",
+        "id": "subtext",
+        "label": "Button Subtext",
+        "default":"Subtext above button"
+      },
+      {
+        "type": "text",
+        "id": "cta_text",
+        "label": "CTA Text",
+        "default":"CTA Text"
+      },
+      {
+        "type": "url",
+        "id": "cta_url",
+        "label": "CTA Link"
+        
+      }
+
+     
+   ],
+   "presets": [
+       {
+      	 "name": "Hero",
+       	 "category": "Home Sections"
+       }
+  	 ]
+  }
+{% endschema %}

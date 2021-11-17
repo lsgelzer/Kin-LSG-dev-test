@@ -1,0 +1,12 @@
+<div class="cart-header">
+    {% if section.settings.cart-logo !=blank %}
+        <img src="{{section.settings.cart-logo}}" alt="cart-logo">
+    {% else %}
+        {{shop.name}}
+    {% endif %}
+    {% if section.settings.back-img !=blank %}
+        <img src="{{section.settings.back-img}}" alt="back">
+    {% else %}
+        close
+    {% endif %}
+</div>

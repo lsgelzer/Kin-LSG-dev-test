@@ -1,0 +1,33 @@
+<header>
+    <div class="header">
+        {% render 'menu-icon' %}
+        {% render 'site-logo' %}
+        {% render 'cart-account' %}
+    </div>
+</header>
+
+  
+
+{% schema %}
+    {
+        "name": "Header",
+        "settings": [
+           {
+            "type": "image_picker",
+            "id": "site-logo",
+            "label": "Site Logo Image"
+           },
+           {
+            "type": "image_picker",
+            "id": "menu-icon",
+            "label": "Main Menu Icon"
+           },
+           {
+            "type": "image_picker",
+            "id": "cart-icon",
+            "label": "Cart Icon"
+           }
+        ]
+    }
+
+{% endschema %}

@@ -1,0 +1,44 @@
+<div class="cart-drawer">
+    {% render 'cart-header' %}
+    {% if cart.item_count > 0 %}
+        <form action="{{ routes.cart_url }}" class="cart__contents" method="post" id="cart">
+            {% render 'line-item' %}
+
+        </form>
+    {%else %}
+    <h3>{{section.settings.empty-cart-message}}</h3>
+    {% endif %}
+    <hr class="cart-subtotal-hr">
+    <div class="cart-total">
+        <p>Subtotal</p>
+        <p>{{cart.total_price}}</p>
+    </div>
+    <div class="cart-footer">
+        <button class="btn checkout" type="submit" name="checkout">checkout</button>
+    </div>
+    <hr class="cart-hr">
+</div>
+{% schema %}
+    {
+        "name": "Side Cart",
+        "settings": [
+           {
+            "type": "image_picker",
+            "id": "cart-logo",
+            "label": "Cart Logo Image"
+           },
+           {
+            "type": "image_picker",
+            "id": "back-img",
+            "label": "Back Icon"
+           },
+           {
+            "type": "text",
+            "id": "empty-cart-message",
+            "label": "Empty Cart Text",
+            "default":"Empty Cart Text"
+          }
+        ]
+    }
+
+{% endschema %}

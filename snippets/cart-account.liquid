@@ -1,0 +1,19 @@
+
+
+  {% if shop.customer_accounts_enabled %}
+    {% if customer %}
+      <a href="/account">My Account</a>
+      
+    {% else %}
+      {{ 'Log In' | customer_login_link }}
+      
+    {% endif %}
+  {% endif %}
+  
+  <a href="/cart">
+    {% if section.settings.cart-icon != blank %}
+        <img src="{{section.settings.cart-icon | img_url: '22x'}}" alt="cart icon">
+    {% else %}
+        cart
+    {% endif %}
+    </a>
