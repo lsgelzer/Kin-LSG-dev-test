@@ -10,7 +10,7 @@
     {% endif %}
   {% endif %}
 </div>
-  <a href="/cart">
+  <a  onClick="toggleCart()">
     {% if section.settings.cart-icon != blank %}
         <img src="{{section.settings.cart-icon | img_url: '100x'}}" alt="cart icon" class="cart-icon">
     {% else %}

@@ -7,8 +7,8 @@
         </form>
                 <hr class="cart-subtotal-hr">
     <div class="cart-total">
-        <p>Subtotal</p>
-        <p>{{cart.total_price}}</p>
+        <p class="subtotal">Subtotal</p>
+        <p class="price">{{cart.total_price | money}}</p>
     </div>
     <div class="cart-footer">
         <button class="btn checkout" type="submit" name="checkout">checkout</button>
@@ -16,6 +16,7 @@
     <hr class="cart-hr">
     {%else %}
     <h3>{{section.settings.empty-cart-message}}</h3>
+    <a href="collections/all" class="btn keep-shopping">Keep Shopping</a>
     {% endif %}
     
 </div>

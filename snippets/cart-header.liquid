@@ -1,11 +1,11 @@
 <div class="cart-header">
     {% if section.settings.cart-logo !=blank %}
-        <img src="{{section.settings.cart-logo | img_url: '100x'}}" alt="cart-logo">
+        <img src="{{section.settings.cart-logo | img_url: '100x'}}" alt="cart-logo" class="cart-logo desktop">
     {% else %}
         {{shop.name}}
     {% endif %}
     {% if section.settings.back-img !=blank %}
-        <img src="{{section.settings.back-img | img_url: '100x' }}" alt="back">
+        <img src="{{section.settings.back-img | img_url: '100x' }}" alt="back" class="back-arrow" onClick="toggleCart()">
     {% else %}
         close
     {% endif %}

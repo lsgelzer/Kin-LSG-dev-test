@@ -21,7 +21,7 @@
   src: url("UniversCondensedLight.woff2") format("woff2"); }
 @font-face {
   font-family: 'Univers Condensed Regular';
-  src: url("https://kin-website-fonts.s3.amazonaws.com/Univers/Univers-Condensed-Regular/UniversCondensedRegular.woff2") format("woff2"); }
+  src: url("UniversCondensedRegular.woff2") format("woff2"); }
 @font-face {
   font-family: 'Univers Extended Bold';
   src: url("UniversExtBold.woff2") format("woff2");
@@ -56,18 +56,18 @@ body{
     margin:0;
 }
 .desktop{
-    display: none;
+    display: none!important;
 }
 .mobile{
-    display: block;
+    display: block!important;
 }
 @media(min-width:768px){
     
     .mobile{
-        display:none;
+        display:none!important;
     }
     .desktop{
-        display: block;
+        display: block!important;
     }
 }
 
@@ -147,7 +147,8 @@ body{
     text-transform: uppercase;
     padding-bottom: 12px;
 }
-.btn.hero-btn{
+.btn{
+    display: block;
     text-align: center;
     text-decoration: none;
     color: #232323;
@@ -175,7 +176,7 @@ body{
     .hero-desc{
         margin: revert;
     }
-    .btn.hero-btn{
+    .hero-btn{
         max-width:290px;
         margin:0;
     }
@@ -249,5 +250,138 @@ body{
     }
     .close-menu-img{
         padding:16px 27px;
+    }
+}
+
+/*==== Cart ==== */
+.cart-drawer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -150%;
+    width: 100%;
+    max-width:100%;   
+    background: #F2f2f2;   ;
+    transition: right ease-in-out .5s;
+}
+.cart-header {
+    margin: 49px 0 95px 0;
+}
+.cart-logo {
+    margin-left: 180px;
+}
+.back-arrow {
+    float: right;
+    margin-right: 36px;
+    margin-bottom:108px;
+}
+.cart-drawer h3 {
+    margin: 0 auto 219px auto;
+    text-align: center;
+    margin-top: 258px;
+    font-family: 'Ogg-Regular';
+    font-size: 40px;
+    
+}
+.btn.keep-shopping {
+    border: 1px solid #000;
+}
+.cart-drawer.open {
+    transform: translateX(0px);
+    right:0;
+    
+}
+.line-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 36px;
+    width:calc(100% - 72px);
+}
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:300px;
+    padding: 0 36px;
+}
+.cart-subtotal-hr {
+    border: #000 1px solid;
+    margin: 16px 36px;
+}
+.cart-hr {
+    margin-top: 32px;
+    width: 122px;
+}
+.line-item-info {
+    display: flex;
+    align-items: center;
+    
+}
+.info {
+    margin-left: 32px;
+}
+.line-item-title {
+    font-family: 'Ogg-Regular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 32px;
+    margin:0 0 2px 0;
+}
+.variant-name-price, .quanity-wrapper {
+    font-family: 'Univers Condensed Regular';
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: .5px;
+    margin:2px 0;
+}
+.quanity-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50px;
+}
+.minus, .plus{
+    cursor: pointer;
+    padding: 0 10px;
+}
+.subtotal{
+    font-family:'Univers Condensed Light';
+    font-size: 11px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+.price{
+    font-family: 'Univers Extended Bold';
+    font-size: 14px;
+    line-height: 31px;
+    letter-spacing: 0.777778px;
+    text-transform: uppercase;
+}
+.btn.checkout{
+    background: #1d1d1d;
+    color:#fff;
+}
+.cart-total p{
+    margin:0;
+}
+@media (min-width:768px){
+
+    .cart-drawer{
+        background: #fff;
+        max-width:414px; 
+    }
+    .back-arrow {
+        float: none;
+        margin-right: 0px;
+        margin-bottom:0px;
+        margin-left:88px;
+    }
+    .cart-header {
+        margin: 49px 0 95px 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
     }
 }
