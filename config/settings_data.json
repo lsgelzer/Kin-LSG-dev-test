@@ -1,6 +1,51 @@
 {
-  "current": "Default",
+  "current": {
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "site-logo": "shopify:\/\/shop_images\/Kin.png",
+          "menu-icon": "shopify:\/\/shop_images\/menu-icon_white_c6b159bb-44aa-46be-8888-dcb11c7e5ab5.png",
+          "cart-icon": "shopify:\/\/shop_images\/cart-icon_white.png"
+        }
+      },
+      "16371086579694d5ac": {
+        "type": "home-hero",
+        "settings": {
+          "desktop-image": "shopify:\/\/shop_images\/img.jpg",
+          "mobile-image": "shopify:\/\/shop_images\/hero_img.jpg",
+          "hero-title": "Bliss up for <span>Blisstober<\/span>",
+          "hero-description": "For a limited time, bundle your bliss and save.",
+          "subtext": "(1x High Rhode, 1x Dream Light, and a 20-Pack of Kin Spritz.)",
+          "cta_text_desktop": "$149 (5% off)",
+          "cta_text_mobile": "Shop Dream Light",
+          "cta_url": "#"
+        }
+      },
+      "menu": {
+        "type": "menu",
+        "settings": {
+          "main-menu": "main-menu",
+          "sub-desktop": "desktop-sub-menu",
+          "sub-mobile": "mobile-sub-menu",
+          "menu-logo": "shopify:\/\/shop_images\/Object.png",
+          "close-menu": "shopify:\/\/shop_images\/open.png"
+        }
+      },
+      "mini-cart": {
+        "type": "mini-cart",
+        "settings": {
+          "cart-logo": "shopify:\/\/shop_images\/Object.png",
+          "back-img": "shopify:\/\/shop_images\/arrow.png",
+          "empty-cart-message": "Your cart is thirsty."
+        }
+      }
+    },
+    "content_for_index": [
+      "16371086579694d5ac"
+    ]
+  },
   "presets": {
-    "Default": { }
+    "Default": {}
   }
 }

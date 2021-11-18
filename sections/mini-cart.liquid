@@ -1,4 +1,4 @@
-<div class="cart-drawer" >
+<div class="cart-drawer js-cart-drawer" >
     {% render 'cart-header' %}
     {% if cart.item_count > 0 %}
         <form action="{{ routes.cart_url }}" class="cart__contents" method="post" id="cart">
